@@ -9,6 +9,8 @@ package hotel;
  *
  * @author Al Shariar
  */
+import java.awt.Dimension;
+import java.awt.Toolkit;
 import java.awt.event.KeyEvent;
 import java.sql.*;
 import javax.swing.*;
@@ -38,6 +40,9 @@ public class hotel extends javax.swing.JFrame {
         update_table2();
         currentdate();
         update_table3();
+         Toolkit toolkit=getToolkit();
+        Dimension size=toolkit.getScreenSize();
+        setLocation(size.width/2-getWidth()/2,size.height/2-getHeight()/2);
     }
     
     public void currentdate(){
